@@ -8,7 +8,7 @@ def load_library(path)
   emoticons = YAML.load_file(path)
 
   emoticons.each_pair {|word, array|
-      yaml_hash["get_meaning"][array.last] = array.first
+      yaml_hash["get_meaning"][array.last] = word
       yaml_hash["get_emoticon"][array.first] = array.last
   }
 
